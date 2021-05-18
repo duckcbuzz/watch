@@ -16,11 +16,6 @@ function Infor(props) {
         alt="banner"
       />
       <InforItem
-        icon={<LocationOnIcon />}
-        content={"486/11A Phan Xích Long, Phú Nhuận, Hồ Chí Minh."}
-      />
-
-      <InforItem
         icon={<LockOpenIcon />}
         content={"Thứ hai - Chủ Nhật : 12h00 - 22h00"}
       />

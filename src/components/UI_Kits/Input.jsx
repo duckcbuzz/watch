@@ -30,7 +30,7 @@ const Input = props => {
         }
         endAdornment={endAdornment}
         labelWidth={label.length * 10}
-        style={{ width: 350, marginTop: 8 }}
+        style={{ maxWidth: 350, marginTop: 8 }}
       />
     </FormControl>
   );

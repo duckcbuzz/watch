@@ -19,18 +19,6 @@ export default function Footer(props) {
   return (
     <Grid container justify="space-between" className={classes.footer}>
       <Grid item>
-        <div style={{ background: "red" }}>
-          <img
-            src="https://bizweb.dktcdn.net/100/287/440/themes/775848/assets/davies.svg"
-            alt=""
-          />
-        </div>
-        <Typography fontSize={18} fontWeight={700}>
-          DAVIES BRAND
-        </Typography>
-        <Typography fontSize={18}>Thương hiệu thời trang đường phố.</Typography>
-      </Grid>
-      <Grid item>
         <Typography
           fontSize={22}
           fontWeight={700}
@@ -39,17 +27,29 @@ export default function Footer(props) {
         >
           Chăm sóc khách hàng
         </Typography>
-        <Typography fontSize={18}>
-          {[
-            "MEMBERSHIP & REWARD",
-            "Hướng dẫn thanh toán",
-            "Chính sách đổi trả",
-            "Quy định & bảo mật ",
-            "Góp ý / Liên hệ Nocturnal",
-          ].map((item, index) => {
-            return <p key={index}>{item}</p>;
-          })}
-        </Typography>
+        <Grid container justify="space-between">
+          <Grid item>
+            <Typography fontSize={18}>
+              {[
+                "MEMBERSHIP & REWARD",
+                "Hướng dẫn thanh toán",
+                "Chính sách đổi trả",
+              ].map((item, index) => {
+                return <p key={index}>{item}</p>;
+              })}
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography fontSize={18}>
+              {[
+                "Quy định & bảo mật ",
+                "Góp ý / Liên hệ Nocturnal",
+              ].map((item, index) => {
+                return <p key={index}>{item}</p>;
+              })}
+            </Typography>
+          </Grid>
+        </Grid>
       </Grid>
       <Grid item className={classes.infor}>
         <Infor />

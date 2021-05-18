@@ -1,14 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import { makeStyles } from "@material-ui/core";
-
 import Card from "./Card";
 
 const useStyles = makeStyles(() => ({
   grid: {
     display: "flex",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
   }
 }));
 
@@ -25,6 +23,7 @@ function ListCard(props) {
             image={item.image}
             name={item.name}
             price={item.price}
+            id={item.id}
           />
         );
       })}

@@ -9,10 +9,10 @@ import LockIcon from "@material-ui/icons/Lock";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import React, { useState } from "react";
-import lapi from "../../assets/lapi.png";
 import Banner from "../UI_Kits/Banner";
 import ButtonSubmit from "../UI_Kits/ButtonSubmit.jsx";
 import Input from "../UI_Kits/Input.jsx";
+import Logo from "../UI_Kits/Logo";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -40,7 +40,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(2)
   },
   password: {
-    width: 350,
+    maxWidth: 350,
     marginTop: theme.spacing(2)
   },
   button: {
@@ -91,13 +91,9 @@ export default function SignIn(props) {
 
   return (
     <Container className={classes.root}>
-      <Banner />
-
       <Grid item container alignItems="center" xs={12} sm={6} md={5} lg={4}>
         <div className={classes.container}>
           <div className={classes.content}>
-            <img className={classes.image} src={lapi} alt=""/>
-
             <React.Fragment>
               <Typography variant="h5" gutterBottom className={classes.h5}>
                 Sign In

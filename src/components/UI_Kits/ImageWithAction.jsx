@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     backgroundSize: "120%",
     position: "relative",
+    objectFit: "cover",
 
     "&:hover": {
       cursor: 'pointer',

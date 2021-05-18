@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     width: '16%',
     margin: "2%",
+    paddingBottom: '30px',
     flexDirection: 'column',
     position: 'relative',
     ["@media (max-width: 768px)"]: {

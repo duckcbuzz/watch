@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
     textTransform: props => props.textTransform,
     textAlign: props => props.textAlign,
     color: props => props.color,
-    padding: props => props.padding
+    padding: props => props.padding,
   },
 }));
 

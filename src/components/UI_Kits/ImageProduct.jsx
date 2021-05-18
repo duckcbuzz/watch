@@ -6,6 +6,7 @@ const useStyles = makeStyles(() => ({
     position: "relative",
     background: "firebrick",
     width: "100%",
+    height: "100%",
     "&:before": {
       content: '" "',
       float: "left",

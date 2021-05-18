@@ -3,32 +3,25 @@ import ListSameProduct from "./ListSameProduct";
 import ListImage from "./ListImage";
 import InforContent from "./InforContent";
 import { Box } from "@material-ui/core";
+import imageNotFound from "../../assets/image-not-found.png";
 
 function InformationPage(props) {
+  const { detail } = props;
   return (
     <div>
       <div style={{ margin: "2%" }}>
         <Box display="flex">
-          <Box>
-            <ListImage
-              listImages={[
-                "https://cf.shopee.vn/file/228542d03f01ddbf605910a351d7695f",
-                "https://cf.shopee.vn/file/228542d03f01ddbf605910a351d7695f",
-                "https://cf.shopee.vn/file/228542d03f01ddbf605910a351d7695f",
-              ]}
-            />
-          </Box>
-          <Box pr={4} pl={4}>
+          <Box pr={4}>
             <img
               width="500px"
-              src="https://cf.shopee.vn/file/228542d03f01ddbf605910a351d7695f"
+              src={detail.image || imageNotFound}
               alt=""
             />
           </Box>
           <Box flexGrow={1}>
             <InforContent
-              name="Áo Hoodie Sunset Volcano Unisex Nocturnal"
-              price="18.000₫"
+              name={detail.name}
+              price={"$" + detail.price}
             />
           </Box>
         </Box>
