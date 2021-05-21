@@ -9,10 +9,8 @@ import LockIcon from "@material-ui/icons/Lock";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import React, { useState } from "react";
-import Banner from "../UI_Kits/Banner";
 import ButtonSubmit from "../UI_Kits/ButtonSubmit.jsx";
 import Input from "../UI_Kits/Input.jsx";
-import Logo from "../UI_Kits/Logo";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -36,11 +34,13 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(8, 4)
   },
   username: {
-    width: 350,
+    maxWidth: '100%',
+    background: 'red',
     marginTop: theme.spacing(2)
   },
   password: {
-    maxWidth: 350,
+    maxWidth: '100%',
+    background: 'red',
     marginTop: theme.spacing(2)
   },
   button: {
@@ -68,9 +68,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function SignIn(props) {
+  const { handleSubmitLogin } = props;
   const classes = useStyles();
 
   const [values, setValues] = useState({
+    email: "",
     password: "",
     showPassword: false
   });
@@ -129,6 +131,7 @@ export default function SignIn(props) {
               <ButtonSubmit
                 name="Sign In"
                 disabled={!(values.email && values.password)}
+                handleSubmitLogin={() => handleSubmitLogin(values)}
               />
 
               <Link href="/forgot-password" className={classes.link}>

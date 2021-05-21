@@ -10,16 +10,17 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ButtonSubmit({ name, disabled }) {
+export default function ButtonSubmit({ name, disabled, handleSubmitLogin }) {
   const classes = useStyles();
   return (
     <Button
       fullWidth
       className={classes.button}
-      type="submit"
+      type="button"
       variant="contained"
       color="primary"
       disabled={disabled}
+      onClick={handleSubmitLogin}
     >
       {name}
     </Button>
